@@ -1,0 +1,149 @@
+.pgNam {
+    color: rgb(64, 17, 104);}
+
+body { background-color: rgb(189, 185, 214);}
+
+.title {
+    color: rgb(189, 185, 214);
+    align-items: center;
+    font-size: xx-large; }
+
+.bgFondo {
+    background-color: rgb(64, 17, 104);
+}
+.padding {padding: 10px 5px
+}
+
+.nav li {
+    padding: 1px;
+    background-color: none;
+    margin: 5px;
+    border-radius: 20px; 
+    color: aliceblue;}
+
+.list {
+    color: rgb(26, 22, 30);
+}
+
+/* general */
+.grid {
+    display: grid;
+    grid-template-areas:
+    "header"
+    "main"
+    "footer";
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+}
+header {grid-area: header;}
+main {grid-area: main;}
+footer {grid-area: footer;}
+.flex, ul {display: flex;}
+li {list-style-type: none;}
+a {text-decoration: none; padding: 10px;}
+.img-fluid {width: auto;}
+p, a {font-family: 'Times New Roman', Times, serif;}
+.bgColorPrimario {background-color:rgb(64, 17, 104);}
+.mb-20 {margin-bottom: 20px;}
+.mt-20 {margin-top: 20px;}
+.sticky {position: sticky; top: 0;}
+.borderBottom {border-bottom: 1px solid rgb(64, 17, 104);}
+.borderTop {border-top: 1px solid rgb(64, 17, 104);}
+.imgDer {grid-area: imgDer; width: 60px;}
+.imgIzq {grid-area: imgIzq;}
+.textoDer {grid-area: textoDer;}
+.textoIzq {grid-area: textoIzq;}
+
+/* intervalo mobile */
+@media screen and (max-width:768px) {
+    .banner-2 {display: none;}
+    .flex {justify-content: center;}
+    ul {flex-wrap: wrap;}
+    a {font-size: 1.3rem;}
+    footer {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    .servicios-g-main {
+        display: grid;
+        grid-template-areas: 
+        "pgNam pgNam"
+        "textoIzq imgDer"
+        "imgIzq textoDer"
+        "list list";
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(6,auto);
+        grid-row-gap: 10px;
+    }
+    .pgNam {grid-area: pgNam;}
+    .textoIzq {grid-area: textoIzq;}
+    .imgDer {grid-area: imgDer; width: 60px; padding: 10px;}
+    .imgIzq {grid-area: imgIzq; width: 60px; padding: 10px;}
+    .textoDer {grid-area: textoDer;}
+    .list {grid-area: list; justify-content: space-around;}
+
+}
+/*intervalo tablet */
+@media  screen and (min-width:769px) and (max-width:1023px) {
+    
+}
+
+/* intervalo desktop */
+@media screen and (min-width: 1024px) {
+    nav {display: flex;
+        width: 100%;
+        justify-content: flex-end;}
+    .m-grid {
+        display: grid;
+        grid-template-areas: 
+        "titulo titulo"
+        "banner-2 banner-2"
+        "textoTitulo textoTitulo"
+        "imgTexto textoImg";
+        grid-template-columns: auto;
+        grid-template-rows: repeat(4, auto);
+    }
+    .textoImg p {padding: 20px;}
+    .banner-2 {grid-area: banner-2;}
+    .titulo {grid-area: titulo; align-items: center; color: rgb(64, 17, 104); }
+    .textoTitulo {grid-area: textoTitulo;}
+    .imgTexto {grid-area: imgTexto;}
+    .textoImg {grid-area: textoImg;}
+    footer {display: flex; justify-content: space-around;}
+
+    .servicios-g-main {
+        display: grid;
+        grid-template-areas: 
+        "pgNam pgNam"
+        "textoIzq imgDer"
+        "imgIzq textoDer"
+        "list list";
+        grid-template-columns: repeat(2,50%);
+        grid-template-rows: repeat(6,auto);
+        grid-row-gap: 10px;
+    }
+    .pgNam {grid-area: pgNam;}
+    .textoIzq {grid-area: textoIzq;}
+    .imgDer {grid-area: imgDer; width: 60px; padding: 5px; align-items: center;}
+    .imgIzq {grid-area: imgIzq; width: 60px; padding: 5px;}
+    .textoDer {grid-area: textoDer;}
+    .list {grid-area: list; justify-content: space-around;}
+
+    .grid-ubicacion {
+        display: grid;
+        grid-template-areas: 
+        "pgNam pgNam"
+        "texto-1 texto-1"
+        "iframe iframe"
+        "texto-2 texto-2";
+        grid-template-columns: repeat(2, 50%);
+        grid-template-rows: repeat(3, auto);
+    }
+    .pgNam {grid-area: pgNam;}
+    .texto-1 {grid-area: texto-1; font-style: italic;}
+    .iframe {grid-area: iframe;}
+    .texto-2 {grid-area: texto-2;}
+    
+}
+
